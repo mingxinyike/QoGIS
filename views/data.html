@@ -1,0 +1,30 @@
+<div id="searchRow">
+    <div id="searchContent">
+        <input id="dataQuery" type="text" placeholder="请输入你感兴趣的的主题或资源名称..." size="30">
+        <span id="searchSubmit" ng-click>SEARCH</span>
+    </div>
+</div>
+<div class="dataContent">
+
+
+    <topic-menu conf="classification" selectedTopics="selectedTopics"></topic-menu>
+
+    <div class="serviceList">
+        <div ng-repeat="item in serviceItem" class="serviceItem">
+            <div class="serviceTitle">
+                <h3>{{item.serviceTitle}}</h3>
+                <span>More>></span>
+            </div>
+            <div class="serviceContent">
+                <p><span class="tableName">Provider:</span><span>{{item.serviceContent.Provider}}</span></p>
+                <p><span class="tableName">Location:</span><span>{{item.serviceContent.Location}}</span></p>
+                <p><span class="tableName">KeyWords:</span><span>{{item.serviceContent.KeyWords}}</span></p>
+                <div class="mark">
+                    <span>{{item.serviceContent.mark}}</span>
+                    <span class="star" ng-class="{level{{ item.serviceContent.mark | parseint }}: true}"></span>
+                </div>
+            </div>
+        </div>
+        <my-pagination conf="paginationConf"></my-pagination>
+    </div>
+</div>

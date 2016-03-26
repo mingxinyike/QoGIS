@@ -1,0 +1,273 @@
+@charset "UTF-8";
+/*    变量        */
+@keyframes myChange {
+  from {
+    height: 100px;
+    opacity: 1; }
+  to {
+    height: 0;
+    opacity: 0; } }
+#searchRow {
+  width: 100%;
+  background: #00A497;
+  height: 70px; }
+  #searchRow #searchContent {
+    width: 900px;
+    margin: auto; }
+    #searchRow #searchContent #dataQuery {
+      width: 600px;
+      margin: 20px 30px;
+      line-height: 32px;
+      border: 1px solid #00A497;
+      border-radius: 5px;
+      padding: 0 20px; }
+      #searchRow #searchContent #dataQuery:focus {
+        outline: none; }
+    #searchRow #searchContent #searchSubmit {
+      display: inline-block;
+      line-height: 32px;
+      color: #fff;
+      font-size: 1.3em;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      padding: 0 10px; }
+      #searchRow #searchContent #searchSubmit:hover {
+        box-shadow: 1px 1px 1px rgba(0, 60, 54, 0.29), inset 0px 0px 2px rgba(0, 0, 0, 0.5); }
+
+.dataContent {
+  width: 1000px;
+  margin: 10px auto;
+  overflow: hidden; }
+
+.topicMenu {
+  width: 280px;
+  margin: 0 20px 0 0;
+  color: #006e54;
+  float: left; }
+  .topicMenu ul.mtree {
+    background: #EEE;
+    margin: 20px auto;
+    max-width: 320px;
+    border-radius: 3px;
+    padding: 1.2em; }
+    .topicMenu ul.mtree ul {
+      margin-left: 1em; }
+    .topicMenu ul.mtree li {
+      list-style: none; }
+    .topicMenu ul.mtree a {
+      display: block;
+      font-family: "Microsoft YaHei" !important; }
+  .topicMenu ul.mtree a {
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition: all 300ms ease-out; }
+  .topicMenu ul.mtree.bubba ul {
+    margin-left: 0; }
+  .topicMenu ul.mtree.bubba ul li {
+    font-size: 0.9em; }
+  .topicMenu ul.mtree.bubba li.mtree-node > a:after {
+    content: '>';
+    margin-left: 0.5em;
+    font-weight: normal; }
+  .topicMenu ul.mtree.bubba li.mtree-node > a {
+    font-weight: bold;
+    text-transform: upperCase; }
+  .topicMenu ul.mtree.bubba > li {
+    border-bottom: 1px solid #DDD; }
+  .topicMenu ul.mtree.bubba > li:last-child {
+    border-bottom: none; }
+  .topicMenu ul.mtree.bubba li:last-child > a {
+    border: none; }
+  .topicMenu ul.mtree.bubba > li.mtree-open > a {
+    background: #DDD; }
+  .topicMenu ul.mtree.bubba li > a:hover {
+    background: #DDD; }
+  .topicMenu ul.mtree.bubba li.mtree-node > a {
+    background: #DDD;
+    font: 1.2em bold;
+    line-height: 1.5em; }
+  .topicMenu ul.mtree.bubba li.mtree-active > a {
+    background: #66BAB7;
+    color: #FFF;
+    z-index: 2;
+    font: 1.2em bold;
+    line-height: 1.5em; }
+  .topicMenu ul.mtree.bubba a {
+    padding: 7px 0px 1px 1em; }
+  .topicMenu ul.mtree.bubba li li > a {
+    padding-left: 2em; }
+  .topicMenu ul.mtree.bubba li li li > a {
+    padding-left: 3em; }
+  .topicMenu ul.mtree.bubba li li li li > a {
+    padding-left: 4em; }
+  .topicMenu ul.mtree.bubba li li li li li > a {
+    padding-left: 5em; }
+  .topicMenu ul.mtree.bubba li ul {
+    transition: all linear 0.5s; }
+  .topicMenu ul.mtree.bubba li ul.ng-hide {
+    animation: 0.5s myChange; }
+  .topicMenu ul.mtree.bubba li ul a.selected::after {
+    content: url(../img/iconfont-checked.png);
+    padding: 0 20px; }
+
+.serviceList {
+  width: 700px;
+  margin: 20px 0 20px 300px; }
+  .serviceList .serviceItem {
+    width: 650px;
+    margin: 0 auto 20px auto;
+    border: 1px solid #EEE; }
+    .serviceList .serviceItem .serviceTitle {
+      width: 100%;
+      background: #EEE;
+      position: relative;
+      padding: 0.5em 2em;
+      line-height: 2em;
+      box-sizing: border-box; }
+      .serviceList .serviceItem .serviceTitle h3 {
+        font-size: 1.2em; }
+      .serviceList .serviceItem .serviceTitle span {
+        position: absolute;
+        top: 0.5em;
+        right: 10px;
+        color: #00A497;
+        font-weight: bold; }
+    .serviceList .serviceItem .serviceContent {
+      width: 100%;
+      padding: 0.5em 2em 3em 2em;
+      position: relative;
+      box-sizing: border-box; }
+      .serviceList .serviceItem .serviceContent p {
+        line-height: 2em; }
+        .serviceList .serviceItem .serviceContent p .tableName {
+          font-weight: bold;
+          padding-right: 5px; }
+      .serviceList .serviceItem .serviceContent .mark {
+        position: absolute;
+        right: 10px;
+        bottom: 10px; }
+        .serviceList .serviceItem .serviceContent .mark span {
+          color: #006e54;
+          font-size: 1.2em;
+          padding-right: 20px; }
+        .serviceList .serviceItem .serviceContent .mark .star {
+          display: inline-block;
+          width: 75px;
+          height: 15px;
+          margin: 1px 0 0 0;
+          overflow: hidden; }
+        .serviceList .serviceItem .serviceContent .mark .level10 {
+          background: url(../img/starsm.png) 0 0 no-repeat; }
+        .serviceList .serviceItem .serviceContent .mark .level9 {
+          background: url(../img/starsm.png) 0 -15px no-repeat; }
+        .serviceList .serviceItem .serviceContent .mark .level8 {
+          background: url(../img/starsm.png) 0 -30px no-repeat; }
+        .serviceList .serviceItem .serviceContent .mark .level7 {
+          background: url(../img/starsm.png) 0 -45px no-repeat; }
+        .serviceList .serviceItem .serviceContent .mark .level6 {
+          background: url(../img/starsm.png) 0 -60px no-repeat; }
+        .serviceList .serviceItem .serviceContent .mark .level5 {
+          background: url(../img/starsm.png) 0 -75px no-repeat; }
+        .serviceList .serviceItem .serviceContent .mark .level4 {
+          background: url(../img/starsm.png) 0 -90px no-repeat; }
+        .serviceList .serviceItem .serviceContent .mark .level3 {
+          background: url(../img/starsm.png) 0 -105px no-repeat; }
+        .serviceList .serviceItem .serviceContent .mark .level2 {
+          background: url(../img/starsm.png) 0 -120px no-repeat; }
+        .serviceList .serviceItem .serviceContent .mark .level1 {
+          background: url(../img/starsm.png) 0 -135px no-repeat; }
+        .serviceList .serviceItem .serviceContent .mark .level0 {
+          background: url(../img/starsm.png) 0 -150px no-repeat; }
+  .serviceList .page-list {
+    width: 100%;
+    text-align: center; }
+    .serviceList .page-list .pagination {
+      display: inline-block;
+      padding-left: 0;
+      margin: 20px auto;
+      border-radius: 4px; }
+      .serviceList .page-list .pagination li {
+        display: inline; }
+      .serviceList .page-list .pagination span {
+        font-size: 1.4em;
+        cursor: pointer;
+        padding: 6px 12px;
+        margin-left: -1px;
+        line-height: 2em;
+        color: #006e54;
+        text-decoration: none;
+        background-color: #fff;
+        border: 1px solid #ddd; }
+        .serviceList .page-list .pagination span:hover {
+          background-color: #ddd; }
+      .serviceList .page-list .pagination .active span {
+        color: #fff;
+        cursor: default;
+        background-color: #006e54;
+        border-color: #006e54; }
+      .serviceList .page-list .pagination .disabled span {
+        cursor: not-allowed;
+        background-color: #fff; }
+
+* a {
+  text-decoration: none; }
+  * a:hover {
+    text-decoration: none; }
+* li {
+  list-style: none; }
+
+/*  index    */
+body {
+  width: 100%;
+  min-width: 1000px;
+  height: 100%;
+  font-family: Lato, Arial, sans-serif; }
+
+header {
+  width: 1000px;
+  height: 70px;
+  margin: auto;
+  position: relative; }
+  header h1 {
+    color: #00A497;
+    font-size: 2.5em;
+    padding: 20px 0;
+    font-family: "Microsoft YaHei", sans-serif; }
+  header #nav {
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+    header #nav li {
+      display: inline-block;
+      font-size: 1.4em;
+      padding: 5px 20px;
+      color: #000; }
+      header #nav li:hover {
+        border-bottom: 2px solid #00A497; }
+    header #nav li.selected {
+      border-bottom: 2px solid #00A497; }
+
+.main {
+  width: 100%; }
+
+footer {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  background: #00A497;
+  overflow: hidden; }
+  footer ul {
+    width: 400px;
+    margin: 20px auto; }
+    footer ul li {
+      display: inline-block;
+      color: white;
+      padding: 0 20px;
+      font-size: 1.2em; }
+    footer ul li + li {
+      border-left: 1px solid #fff; }
+
+*[ng-click] {
+  cursor: pointer; }

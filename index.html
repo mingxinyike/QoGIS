@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>QoGIS</title>
+    <!--css样式开始-->
+    <link type="text/css" rel="stylesheet" href="styles/reset.css" />
+    <link type="text/css" rel="stylesheet" href="styles/main.css" />
+    <!--<link type="text/css" rel="stylesheet" href="styles/Login.css" />-->
+    <!--css样式结束-->
+</head>
+<body>
+<!--header-->
+<header  ng-controller="headerCtrl">
+    <h1 ng-click="toLocate('data')"> QoGIS</h1>
+    <ul id="nav">
+        <li ng-click="toLocate('data')" ng-class="{selected: selectedIndex == 'data'}">DATA</li>
+        <li ng-click="toLocate('map')" ng-class="{selected: selectedIndex == 'map'}">MAP</li>
+        <li ng-click="toLocate('analysis')" ng-class="{selected: selectedIndex == 'analysis'}">ANALYSIS</li>
+        <li ng-click="toLocate('about')" ng-class="{selected: selectedIndex == 'about'}">ABOUT</li>
+    </ul>
+</header>
+
+<!--content-->
+<div class="main">
+    <div ng-view></div>
+</div>
+
+<!--footer-->
+<footer>
+    <ul>
+        <li>ABOUT</li>
+        <li>CONTACT</li>
+        <li>TEAM</li>
+    </ul>
+</footer>
+
+
+<!--js库开始-->
+<script src='scripts/vendor/require.js' data-main='scripts/main.js'></script>
+<!--js库结束-->
+</body>
+</html>
